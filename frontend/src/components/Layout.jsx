@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import "./layout.css"
 
 export default function Layout({ children }) {
   return (
@@ -14,7 +15,7 @@ export default function Layout({ children }) {
       </main>
 
       <footer>
-        <p>© 2025 Mon App</p>
+        <p>© 2020 Kasa. All rights reserved</p>
       </footer>
     </div>
   )
