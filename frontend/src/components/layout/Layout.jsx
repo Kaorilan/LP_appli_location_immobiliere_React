@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom"
+import logo from "../../assets/LOGO_Kasa.png"
+import logoFooter from "../../assets/Footer_Desktop.png"
 import "./layout.css"
 
 export default function Layout({ children }) {
   return (
-    <div>
+    <div id="layout">
       <header>
+        <img src={logo} alt="Logo Kasa"/>
         <nav>
           <Link to="/">Accueil</Link> | <Link to="/about">À propos</Link>
         </nav>
@@ -15,7 +18,7 @@ export default function Layout({ children }) {
       </main>
 
       <footer>
-        <p>© 2020 Kasa. All rights reserved</p>
+        <img src={logoFooter} alt="Logo Kasa"/>
       </footer>
     </div>
   )
