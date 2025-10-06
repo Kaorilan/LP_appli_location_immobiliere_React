@@ -1,18 +1,13 @@
 html,
 body {
   height: 100%;
-  margin: 0 10%;
-
+  margin: 0 5%;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  
   background-color: black;
-
 }
-
 
 
 #layout {
@@ -28,22 +23,55 @@ body {
 
 header{
   display: flex;
-  
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 16px 8px;
+  margin: 0 5%;
+}
+
+
+nav{
+  
+  display: flex;
+
+  gap: 57px;
+  
 }
 
 main {
-  flex: 1; /* prend tout l’espace restant entre header et footer */
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 8px;
+  margin: 0 5%;
 }
 
 footer {
   background-color: black;
-  
   text-align: center;
   padding: 1.5rem 0;
 }
 
+footer img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+a {
+  font-weight: 500;
+  font-size: 25px;
+  color: black;
+  text-decoration: inherit;
+  border-bottom: solid 1px transparent;
+}
+
+a:hover {
+  color: black;
+  border-bottom: solid 1px black;
+}
 
 
