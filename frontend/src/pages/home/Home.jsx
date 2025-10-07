@@ -1,28 +1,25 @@
-
-
+import banniere from "../../assets/Image source 1.png"
+import Card from "../../components/card/Card"
+import useLogements from "../../hooks/useLogements"
 import "./home.css"
 
 export default function Home() {
-  
+  const { logements, loading } = useLogements()
+
+  if (loading) return <p>Chargement en cours...</p>
 
   return (
-    <div>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          
-        </a>
-        <a href="https://react.dev" target="_blank">
-          
-        </a>
+    <div className="home">
+      <div className="home-banner">
+        <img src={banniere} alt="bannière accueil" className="banner-img" />
+        <h1>Chez vous, partout et ailleurs</h1>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        
-        <p>Edit <code>src/App.jsx</code> and save to test HMR</p>
+
+      <div className="cards-container">
+        {logements.map((item) => (
+          <Card key={item.id} title={item.title} cover={item.cover} id={item.id} />
+        ))}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   )
 }
