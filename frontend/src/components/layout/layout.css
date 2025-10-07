@@ -6,7 +6,6 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  background-color: black;
 }
 
 
@@ -31,11 +30,8 @@ header{
 
 
 nav{
-  
   display: flex;
-
   gap: 57px;
-  
 }
 
 main {
@@ -50,7 +46,7 @@ main {
 footer {
   background-color: black;
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 0px 0px 16px 0px;
 }
 
 footer img {

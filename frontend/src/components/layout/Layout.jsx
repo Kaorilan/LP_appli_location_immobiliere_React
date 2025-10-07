@@ -18,7 +18,7 @@ export default function Layout({ children }) {
       </main>
 
       <footer>
-        <img src={logoFooter} alt="Logo Kasa"/>
+        <img src={logoFooter} alt="Logo Kasa footer"/>
       </footer>
     </div>
   )

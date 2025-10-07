@@ -1,1 +1,29 @@
-/*notfound css/*
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+main .mainNotfound{
+    width: 100%;
+    min-height: 60vh;
+}
+
+.notfound{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 250px;
+    color: #ff6060;
+    margin: auto;
+    
+}
+
+.oups {
+    font-size: 20px;
+    color: #ff6060;
+    margin-top: 0;
+    margin-bottom: 70px;
+}
+
+
+
+
+.mainNotfound a{
+    font-size: 20px;
+}

@@ -1,0 +1,52 @@
+.collapse {
+  width: 80%;
+  max-width: 1023px;
+  margin: 1rem auto;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6060;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.collapse-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.collapse-content {
+  padding: 1rem;
+  color: #ff6060;
+  background-color: #f6f6f6;
+  border-radius: 0 0 10px 10px;
+  animation: openCollapse 0.3s ease;
+}
+
+@keyframes openCollapse {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
