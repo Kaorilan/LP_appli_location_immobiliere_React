@@ -40,10 +40,11 @@
 
 .collapse-content {
   padding: 1rem;
-  color: #ff6060;
+  color: black;
   background-color: #f6f6f6;
   border-radius: 0 0 10px 10px;
   animation: openCollapse 0.3s ease;
+  text-align: left;
 }
 
 @keyframes openCollapse {

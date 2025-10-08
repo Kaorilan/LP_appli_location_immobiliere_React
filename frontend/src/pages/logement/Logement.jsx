@@ -24,7 +24,6 @@ export default function Logement() {
 
   return (
     <div className="logement">
-      {/* Galerie d’images */}
       <Gallery pictures={logement.pictures} />
 
       <div className="logement-header">
@@ -53,7 +52,11 @@ export default function Logement() {
 
       <div className="logement-collapses">
         <Collapse title="Description"> {logement.description} </Collapse>
-        <Collapse title="Équipements"> {logement.equipments?.join(", ")} </Collapse>
+        <Collapse title="Équipements">
+            {logement.equipments?.map((equip, index) => (
+                <p key={index}>{equip}</p>
+            ))}
+        </Collapse>
       </div>
     </div>
   )

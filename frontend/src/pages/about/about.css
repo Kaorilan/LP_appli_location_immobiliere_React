@@ -9,3 +9,8 @@
     filter: brightness(0.8);
     padding-bottom: 20px;
 }
+
+
+@media (max-width: 768px) {
+    
+}

@@ -27,3 +27,7 @@ main .mainNotfound{
 .mainNotfound a{
     font-size: 20px;
 }
+
+@media (max-width: 768px) {
+
+}
