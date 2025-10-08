@@ -8,7 +8,7 @@ export default function Collapse({ title, children }) {
     <div className="collapse">
       <div className="collapse-header" onClick={() => setIsOpen(!isOpen)}>
         <h2>{title}</h2>
-        <span className={`arrow ${isOpen ? "open" : ""}`}>⌃</span>
+        <span className={`collapse-arrow ${isOpen ? "open" : ""}`}>⌃</span>
       </div>
       {isOpen && (
         <div className="collapse-content">

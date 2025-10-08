@@ -29,12 +29,12 @@
 }
 
 .arrow {
-  flex-shrink: 0;
+  
   transition: transform 0.3s ease;
   font-size: 1.5rem;
 }
 
-.arrow.open {
+.collapse-arrow.open {
   transform: rotate(180deg);
 }
 
