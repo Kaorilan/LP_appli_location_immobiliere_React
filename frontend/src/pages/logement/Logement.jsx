@@ -24,7 +24,7 @@ export default function Logement() {
 
   return (
     <div className="logement">
-      {/* 🔹 Galerie d’images */}
+      {/* Galerie d’images */}
       <Gallery pictures={logement.pictures} />
 
       <div className="logement-header">
@@ -52,8 +52,8 @@ export default function Logement() {
       </div>
 
       <div className="logement-collapses">
-        <Collapse title="Description" content={logement.description} />
-        <Collapse title="Équipements" content={logement.equipments?.join(", ")}/>
+        <Collapse title="Description"> {logement.description} </Collapse>
+        <Collapse title="Équipements"> {logement.equipments?.join(", ")} </Collapse>
       </div>
     </div>
   )
