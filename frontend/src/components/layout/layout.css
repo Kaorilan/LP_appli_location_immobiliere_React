@@ -76,5 +76,7 @@ a:hover {
     gap: 30px;
   }
 
-  
+  .logo {
+    width: 30%;
+  }
 }

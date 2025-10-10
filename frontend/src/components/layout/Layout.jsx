@@ -7,7 +7,7 @@ export default function Layout({ children }) {
   return (
     <div id="layout">
       <header>
-        <img src={logo} alt="Logo Kasa"/>
+        <img src={logo} className="logo" alt="Logo Kasa"/>
         <nav>
           <Link to="/">Accueil</Link> | <Link to="/about">À propos</Link>
         </nav>
