@@ -1,11 +1,12 @@
-import banniere from "../../assets/Section_About.png"
+import Banner from "../../components/banner/Banner"
+import banniere from "../../assets/Image source 2.png"
 import Collapse from "../../components/collapse/Collapse"
 import "./about.css"
 
 export default function About() {
   return (
-    <div className="mainAbout">
-      <img src={banniere} className="banniere" alt="bannière about" />
+    <div className="about">
+      <Banner image={banniere} />
 
       <div className="about-collapses">
         <Collapse title="Fiabilité">

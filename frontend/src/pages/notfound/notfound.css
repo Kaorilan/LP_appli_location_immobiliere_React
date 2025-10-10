@@ -22,12 +22,20 @@ main .mainNotfound{
 }
 
 
-
-
 .mainNotfound a{
     font-size: 20px;
 }
 
 @media (max-width: 768px) {
+    .notfound {
+        width: 80%;
+        font-size: 130px;
+    }
 
+    .oups {
+        width: 50%;
+        margin: auto;
+        padding-bottom: 15%;
+        padding-top: 10%;
+    }
 }
