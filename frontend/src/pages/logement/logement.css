@@ -27,9 +27,11 @@
   margin-bottom: 0.5rem;
 }
 
-.logement-location {
-  margin: 0;
+.logement p {
+  color: black;
+  text-align: left;
 }
+
 
 .logement-tags {
   display: flex;
@@ -97,9 +99,23 @@
 
   .logement-collapses {
     flex-direction: column;
+    margin: auto;
   }
+  
 
   .logement-host {
-    align-items: flex-start;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .rating {
+    order: 1;
+  }
+
+  .host-info {
+    order: 2;
   }
 }

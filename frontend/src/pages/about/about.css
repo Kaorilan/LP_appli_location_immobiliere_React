@@ -13,8 +13,13 @@
 }
 
 @media (max-width: 768px) {
-  .banner-img {
+  
+    .banner-img {
     height: 111px;
+  }
+
+  .about-collapses {
+    width: 100%;
   }
   
 }
