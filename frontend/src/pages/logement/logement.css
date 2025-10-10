@@ -85,6 +85,9 @@
   display: flex;
   gap: 2rem;
   margin-top: 2rem;
+  flex-direction: row;
+  
+  align-items: flex-start;
 }
 
 .logement-collapses > div {

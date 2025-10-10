@@ -1,3 +1,4 @@
+import Banner from "../../components/banner/Banner"
 import banniere from "../../assets/Image source 1.png"
 import Card from "../../components/card/Card"
 import useLogements from "../../hooks/useLogements"
@@ -11,10 +12,7 @@ export default function Home() {
 
   return (
     <div className="home">
-      <div className="home-banner">
-        <img src={banniere} alt="Bannière d'accueil Kasa" className="banner-img" />
-        <h1 className="banner-text">Chez vous, partout et ailleurs</h1>
-      </div>
+      <Banner image={banniere} text="Chez vous, partout et ailleurs" />
 
       <div className="cards-container">
         {logements.map((item) => (
