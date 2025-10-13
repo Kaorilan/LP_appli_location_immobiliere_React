@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import logo from "../../assets/LOGO_Kasa.png"
-import logoFooter from "../../assets/Footer_Desktop.png"
+import footerDesktop from "../../assets/Footer_Desktop.png"
+import footerMobile from "../../assets/footer_Mobile.png"
 import "./layout.css"
 
 export default function Layout({ children }) {
@@ -18,7 +19,8 @@ export default function Layout({ children }) {
       </main>
 
       <footer>
-        <img src={logoFooter} alt="Logo Kasa footer"/>
+        <img src={footerDesktop} alt="Logo Kasa footer desktop" className="footer_img_desktop"/>
+        <img src={footerMobile} alt="Logo kasa footer mobile" className="footer_img_mobile"/>
       </footer>
     </div>
   )
