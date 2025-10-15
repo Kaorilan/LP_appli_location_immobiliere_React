@@ -1,4 +1,4 @@
-// src/__tests__/Collapse.test.jsx
+
 import { render, screen, fireEvent } from "@testing-library/react"
 import Collapse from "../components/collapse/Collapse"
 

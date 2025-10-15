@@ -1,4 +1,4 @@
-// src/__tests__/Card.test.jsx
+
 import { render, screen } from "@testing-library/react"
 import { MemoryRouter } from "react-router-dom"
 import Card from "../components/card/Card"
