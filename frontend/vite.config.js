@@ -1,12 +1,19 @@
-// vite.config.js
-import { defineConfig } from "vite"
-import react from "@vitejs/plugin-react"
+
+
+import { defineConfig } from "vitest/config"
 
 export default defineConfig({
   plugins: [react()],
   test: {
+    globals: true,
     environment: "jsdom",
-    globals: true,         // ✅ permet d’utiliser test(), expect() directement
     setupFiles: "./src/setupTests.js"
+    coverage: {
+      provider: "c8",
+      reporter: ["text", "json", "html"], // formats de rapport
+      all: true,
+      include: ["src/components/**"], // dossiers à inclure
+      exclude: ["node_modules/", "src/main.jsx"]
+    }
   }
 })
