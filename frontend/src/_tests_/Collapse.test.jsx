@@ -30,9 +30,13 @@ describe("Collapse", () => {
   })
 
   test("la classe de la flèche change quand ouvert", () => {
-    render(<Collapse title="Titre">Contenu</Collapse>)
-    const header = screen.getByText("Titre")
-    fireEvent.click(header)
-    expect(document.querySelector(".arrow.open")).toBeTruthy()
-  })
+  render(<Collapse title="Titre">Contenu</Collapse>)
+  const header = screen.getByText("Titre")
+  const arrow = screen.getByText("⌃") 
+  expect(arrow).not.toHaveClass("open")
+  
+  fireEvent.click(header)
+  expect(arrow).toHaveClass("open")
+})
+
 })
