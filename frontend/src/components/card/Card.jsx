@@ -1,11 +1,15 @@
-import { Link } from "react-router-dom"
-import "./card.css"
+import { Link } from "react-router-dom";
+import "./Card.css";
 
-export default function Card({ id, title, cover }) {
+function Card({ id, title, cover }) {
+  const imageSrc = cover || "/images/fallback.jpg";
+
   return (
     <Link to={`/logement/${id}`} className="card">
-      <img src={cover} alt={title} className="card-img" />
-      <div className="card-title">{title}</div>
+      <img src={imageSrc} alt={title} className="card-img" />
+      <h2 className="card-title">{title}</h2>
     </Link>
-  )
+  );
 }
+
+export default Card;
