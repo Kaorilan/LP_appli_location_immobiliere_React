@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import "./Card.css";
 import logo from "../../assets/LOGO_Kasa.png"; 
