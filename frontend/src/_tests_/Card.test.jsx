@@ -21,13 +21,15 @@ describe("Card", () => {
     expect(link).toHaveAttribute("href", "/logement/abc123")
   })
 
-  test("rend fallback si pas d'image (si tu gères un fallback)", () => {
-    render(
-      <MemoryRouter>
-        <Card id="noimg" title="Sans image" />
-      </MemoryRouter>
-    )
-    // adapte selon ton implémentation : ex. vérifie présence d'une classe ou alt texte
-    expect(screen.getByText("Sans image")).toBeInTheDocument()
-  })
+  test("rend fallback si pas d'image", () => {
+  render(
+    <MemoryRouter>
+      <Card id="noimg" title="Sans image" />
+    </MemoryRouter>
+  )
+
+  const img = screen.getByAltText("Sans image")
+  expect(img).toHaveAttribute("src", expect.stringContaining("LOGO_Kasa"))
+})
+
 })
