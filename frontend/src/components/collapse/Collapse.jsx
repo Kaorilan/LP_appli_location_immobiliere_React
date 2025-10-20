@@ -12,8 +12,9 @@ function Collapse({ title, children }) {
       <div className="collapse-header" onClick={() => setIsOpen(!isOpen)}>
         {title}
         <FontAwesomeIcon
-          icon={faChevronUp} // utilisation de FontAwesomeIcon
-          className={isOpen ? "open" : ""} // toggle la classe open
+          data-testid="collapse-icon"
+          icon={faChevronUp}
+          className={`collapse-icon ${isOpen ? "open" : ""}`}
         />
       </div>
       {isOpen && <div className="collapse-content">{children}</div>}
