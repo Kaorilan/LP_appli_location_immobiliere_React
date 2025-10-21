@@ -3,7 +3,11 @@
     "target": "ESNext",
     "module": "ESNext",
     "jsx": "react-jsx",
-    "types": ["vitest/globals", "@testing-library/jest-dom"]
+    "moduleResolution": "node",
+    "types": ["vitest/globals", "@testing-library/jest-dom", "node"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
-  "include": ["src"]
+  "include": ["src/**/*", "src/**/*.test.js", "src/**/*.spec.js"],
+  "exclude": ["node_modules", "dist"]
 }

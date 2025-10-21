@@ -8,8 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "test": "vitest --config vitest.config.js",
+  "coverage": "vitest run --config vitest.config.js --coverage"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
