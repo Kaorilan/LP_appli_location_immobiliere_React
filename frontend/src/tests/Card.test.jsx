@@ -31,6 +31,6 @@ describe("Card", () => {
 
   const img = screen.getByAltText("Sans image")
   expect(img).toHaveAttribute("src", expect.stringContaining("LOGO_Kasa"))
-})
+  })
 
 })
