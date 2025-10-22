@@ -48,10 +48,16 @@ describe("Collapse", () => {
     expect(screen.queryByText("Contenu")).toBeNull()
   })
 
-  test("gère un contenu null ou undefined", () => {
+  test("gère un contenu null", () => {
     render(<Collapse title="Titre">{null}</Collapse>)
     fireEvent.click(screen.getByText("Titre"))
-    expect(screen.queryByText(/.*/)).toBeNull()
+    expect(screen.getByText("Aucun contenu")).toBeInTheDocument()
+  })
+
+  test("gère un contenu vide", () => {
+    render(<Collapse title="Titre">{""}</Collapse>)
+    fireEvent.click(screen.getByText("Titre"))
+    expect(screen.getByText("Aucun contenu")).toBeInTheDocument()
   })
 
   test("gère les props manquantes sans erreur", () => {
