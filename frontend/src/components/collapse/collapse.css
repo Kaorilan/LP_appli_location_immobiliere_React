@@ -7,7 +7,7 @@
   border-radius: 10px;
   overflow: hidden;
   z-index: 1;
-  gap: 20px;
+
 }
 
 .collapse-header {
@@ -50,6 +50,11 @@
   text-align: left;
   
 }
+
+.collapse-content p {
+  margin: 0.25rem 0;
+}
+
 
 @keyframes openCollapse {
   from {
