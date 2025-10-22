@@ -12,7 +12,6 @@ Application web développée dans le cadre de la formation Testeur Logiciel d'Op
 
 ### Back-end
 Avec Docker :
-```bash
 docker-compose up -d
 
 ### Front-end
