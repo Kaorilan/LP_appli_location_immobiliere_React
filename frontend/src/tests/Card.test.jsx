@@ -33,4 +33,60 @@ describe("Card", () => {
   expect(img).toHaveAttribute("src", expect.stringContaining("LOGO_Kasa"))
   })
 
+  // Nouveau test : gère un titre vide
+  test("gère un titre vide", () => {
+    render(
+      <MemoryRouter>
+        <Card id="abc123" title="" cover="image-test.jpg" />
+      </MemoryRouter>
+    )
+
+    const img = screen.getByAltText("")
+    expect(img).toBeInTheDocument()
+    expect(img).toHaveAttribute("src", "image-test.jpg")
+
+    const link = screen.getByRole("link")
+    expect(link).toHaveAttribute("href", "/logement/abc123")
+  })
+
+  //gère un id manquant
+  test("gère un id manquant", () => {
+    render(
+      <MemoryRouter>
+        <Card title="Mon logement" cover="image-test.jpg" />
+      </MemoryRouter>
+    )
+
+    const title = screen.getByText("Mon logement")
+    expect(title).toBeInTheDocument()
+
+    const link = title.closest("a")
+    expect(link).toHaveAttribute("href", "/logement/undefined")
+  })
+
+  //navigation au clavier (Enter)
+  test("peut être navigué avec la touche Enter", () => {
+    render(
+      <MemoryRouter>
+        <Card id="abc123" title="Mon logement" cover="image-test.jpg" />
+      </MemoryRouter>
+    )
+
+    const link = screen.getByRole("link")
+    fireEvent.keyDown(link, { key: "Enter", code: "Enter" })
+    expect(link).toHaveAttribute("href", "/logement/abc123")
+  })
+
+  //vérifie la classe CSS
+  test("rend la classe card correctement", () => {
+    render(
+      <MemoryRouter>
+        <Card id="abc123" title="Mon logement" cover="image-test.jpg" />
+      </MemoryRouter>
+    )
+
+    const card = screen.getByText("Mon logement").closest("div")
+    expect(card).toHaveClass("card")
+  })
+
 })

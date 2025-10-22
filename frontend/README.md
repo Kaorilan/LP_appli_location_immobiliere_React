@@ -51,6 +51,9 @@ Composant Card :
 
 Vérification titre et image et link correct.
 Mise en place pour rendre un fallback si pas d'image, mise en place du logo de Kasa par défaut.
+Vérification pour gérer un id manquant.
+Vérification de la navigation au clavier (Touche Enter).
+Vérification de la classe card s'affiche correctement.
 
 
 Structure du projet
