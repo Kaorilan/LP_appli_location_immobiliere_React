@@ -22,5 +22,5 @@ export default function useLogements() {
       })
   }, [])
 
-  return { logements, loading, error }
-}
+  return { logements, loading, error };
+};
