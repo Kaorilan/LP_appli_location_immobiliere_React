@@ -15,7 +15,7 @@ export default function Layout({ children }) {
       </header>
 
       <main>
-        {children} {/* ici s’affiche le contenu variable */}
+        {children} {}
       </main>
 
       <footer>

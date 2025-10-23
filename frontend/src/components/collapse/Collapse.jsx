@@ -32,10 +32,7 @@ function Collapse({ title = "", children }) {
           className={`collapse-icon ${isOpen ? "open" : ""}`}
         />
       </button>
-      {isOpen && (
-        <div id="collapse-content" className="collapse-content">
-          {children || "Aucun contenu"}
-        </div>
+      {isOpen && (<div id="collapse-content" className="collapse-content">{children || "Aucun contenu"}</div>
       )}
     </div>
   );
