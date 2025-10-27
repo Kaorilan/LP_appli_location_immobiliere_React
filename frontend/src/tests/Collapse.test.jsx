@@ -30,7 +30,7 @@ describe("Collapse", () => {
     expect(screen.getByText("Cuisine")).toBeInTheDocument()
   })
 
-  test("la classe de la flèche change quand ouvert", () => {
+  test("le css de la flèche change quand ouvert", () => {
   render(<Collapse title="Titre">Contenu</Collapse>)
   const header = screen.getByText("Titre")
   const arrow = screen.getByTestId("collapse-icon") 
