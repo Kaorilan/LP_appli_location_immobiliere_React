@@ -8,7 +8,7 @@ Kasa est une application web développée dans le cadre de la formation Testeur 
 - Navigation entre les pages (Accueil, À propos, Fiche Logement) via React Router.
 - Composants : `Layout` (structure principale), `Collapse` (afficher/masquer descriptions et équipements), `Gallery` (carrousel d'images), `Card` (cartes cliquables), `Banner`.
 - Hook personnalisé pour accéder aux données.
-- Tests unitaires (et d'intégration (en cours de rédaction)) pour valider le comportement des composants.
+- Tests unitaires pour valider le comportement des composants.
 
 ### Technologies
 
