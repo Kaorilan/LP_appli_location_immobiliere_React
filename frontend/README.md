@@ -1,5 +1,5 @@
 ### Kasa - Application de location immobilière
-Kasa est une application web développée dans le cadre de la formation Testeur Logiciel d'OpenClassrooms. Elle permet de consulter une liste de logements avec des détails interactifs (composant Collapse, carrousel d'images) et une navigation fluide via React Router. Le projet inclut des tests unitaires et d'intégration pour garantir la qualité.
+Kasa est une application web développée dans le cadre de la formation Testeur Logiciel d'OpenClassrooms. Elle permet de consulter une liste de logements avec des détails interactifs (composant Collapse, carrousel d'images) et une navigation fluide via React Router. Le projet inclut des tests unitaires pour garantir la qualité.
 
 
 ### Fonctionnalités
