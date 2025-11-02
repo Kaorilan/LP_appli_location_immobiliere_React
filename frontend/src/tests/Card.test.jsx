@@ -72,7 +72,7 @@ describe("Card", () => {
     expect(link).toHaveAttribute("href", "/logement/abc123")
   })
 
-  test("rend le css card correctement", () => {
+  test("rend la class card correctement", () => {
     render(
       <MemoryRouter>
         <Card id="abc123" title="Mon logement" cover="image-test.jpg" />
