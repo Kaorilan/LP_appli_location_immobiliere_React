@@ -47,6 +47,9 @@ function Collapse({ title = "", children }) {
         id="collapse-content"
         ref={contentRef}
         className={`collapse-content ${isOpen ? "open" : ""}`}
+        style={{
+          maxHeight: isOpen ? `${contentRef.current?.scrollHeight}px` : "0px",
+        }}
       >
         {children || "Aucun contenu"}
       </div>

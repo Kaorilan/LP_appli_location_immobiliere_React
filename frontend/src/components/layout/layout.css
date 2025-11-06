@@ -78,6 +78,11 @@ a:hover {
     gap: 30px;
   }
 
+  nav a {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
   .logo {
     width: 30%;
   }
