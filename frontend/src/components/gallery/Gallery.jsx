@@ -6,9 +6,9 @@ export default function Gallery({ pictures }) {
 
   // Aller à la photo précédente
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
+    setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? pictures.length - 1 : prevIndex - 1
-    )
+    ) 
   }
 
   // Aller à la photo suivante

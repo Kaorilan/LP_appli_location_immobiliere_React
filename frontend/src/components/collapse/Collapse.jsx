@@ -1,15 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "./collapse.css";
 
 function Collapse({ title = "", children }) {
   const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef(null); // référence au contenu
 
   const handleToggle = (e) => {
     e.preventDefault();
     setIsOpen(!isOpen);
   };
+
+  // ajuste dynamiquement la hauteur du contenu
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.style.maxHeight = isOpen
+        ? `${contentRef.current.scrollHeight}px`
+        : "0px";
+    }
+  }, [isOpen]);
 
   return (
     <div className="collapse">
@@ -32,8 +42,14 @@ function Collapse({ title = "", children }) {
           className={`collapse-icon ${isOpen ? "open" : ""}`}
         />
       </button>
-      {isOpen && (<div id="collapse-content" className="collapse-content">{children || "Aucun contenu"}</div>
-      )}
+
+      <div
+        id="collapse-content"
+        ref={contentRef}
+        className={`collapse-content ${isOpen ? "open" : ""}`}
+      >
+        {children || "Aucun contenu"}
+      </div>
     </div>
   );
 }

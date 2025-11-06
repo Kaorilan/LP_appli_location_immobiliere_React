@@ -41,19 +41,30 @@
   
 }
 
+.collapse-icon {
+  transition: transform 0.3s ease;
+} 
 
 .collapse-content {
-  padding: 1rem;
   color: black;
   background-color: #f6f6f6;
   border-radius: 0 0 10px 10px;
-  animation: openCollapse 0.3s ease;
+  transition: max-height 0.3s ease, padding 0.3s ease;
   text-align: left;
-  
+  overflow: hidden;
+  padding: 0 1rem;
+  max-height: 0; 
+}
+
+.collapse-content.open {
+  padding: 1rem;
+  margin: 5px 0px 5px; 
+  max-height: 500px;
 }
 
 .collapse-content p {
   margin: 0.25rem 0;
+  
 }
 
 
